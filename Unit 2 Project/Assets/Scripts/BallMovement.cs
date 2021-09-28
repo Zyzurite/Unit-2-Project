@@ -7,6 +7,10 @@ public class BallMovement : MonoBehaviour
 
     public float speed = 2;
     private Rigidbody rb;
+    public bool LR = false;
+    public bool FB = false;
+    private float x;
+    private float z;
 
     Vector3 velocity;
 
@@ -23,13 +27,21 @@ public class BallMovement : MonoBehaviour
     void PlayerMover()
     {
         // Turn player based on mouse movement
-        
+
         // Move player based on keyboard presses
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        if (LR == true)
 
-        Vector3 move = new Vector3(x, 0f, 0f);
+        {
+            x = Input.GetAxis("Horizontal");
+        }
+        if (FB == true)
+        { 
+            z = Input.GetAxis("Vertical");
+        }
+
+        
+        Vector3 move = new Vector3(x, 0f, z);
         rb.AddForce(move * speed);
     }
 
