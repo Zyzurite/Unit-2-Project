@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
 
-    public float speed = 2;
+    public float speed = 15;
     private Rigidbody rb;
     public bool LR = false;
     public bool FB = false;
