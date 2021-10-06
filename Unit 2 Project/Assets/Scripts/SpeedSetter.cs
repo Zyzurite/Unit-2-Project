@@ -6,6 +6,7 @@ public class SpeedSetter : MonoBehaviour
 {
     public float Playerspeed;
     public GameObject player;
+    public GameObject newposition;
 
     void OnCollisionEnter(Collision collision)
     {

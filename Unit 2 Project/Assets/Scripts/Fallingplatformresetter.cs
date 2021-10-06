@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Fallingplatformresetter : MonoBehaviour
 {
-    public Vector3 position;
-    public GameObject platforms;
+    public GameObject warpPoint;
+    public GameObject platforms ;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -19,7 +19,8 @@ public class Fallingplatformresetter : MonoBehaviour
                 platforms.transform.GetChild(i).GetComponentInChildren<Renderer>().material.color = Color.white;
             }
 
-            collision.gameObject.transform.position = position;
+            collision.gameObject.transform.position = warpPoint.transform.position;
+
         }
     }
 }
